@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Racing 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="start-screen" class="overlay">
+    <h1 class="title">X RACING</h1>
+    <p class="subtitle">WASD / Arrow Keys untuk kontrol</p>
+    <p class="subtitle">SHIFT = Nitro &nbsp;|&nbsp; SPACE = Brake</p>
+    <button id="start-btn" class="btn">START ENGINE</button>
+  </div>
+
+  <!-- CONTROLS PANEL -->
+  <div id="controls" class="panel">
+    <div><b>W/↑</b> Gas  <b>S/↓</b> Mundur</div>
+    <div><b>A/←</b> Kiri  <b>D/→</b> Kanan</div>
+    <div><b>SHIFT</b> Nitro  <b>SPACE</b> Brake</div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="panel">
+    <div>LAP: <span id="lap">1</span> / 3</div>
+    <div>TIME: <span id="time">0.00</span>s</div>
+    <div>NITRO: <span id="nitro">100</span>%</div>
+  </div>
+
+  <!-- SPEEDOMETER -->
+  <div id="speedometer" class="panel">
+    <span id="kmh">0</span><small>KM/H</small>
+  </div>
+
+  <!-- THREE.JS via importmap -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="game.js"></script>
+
+</body>
+</html>
